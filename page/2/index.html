@@ -327,6 +327,151 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.alphamj.cn/2018/03/24/Logistic-Regression/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="w-mj">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ahphaMJ's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/24/Logistic-Regression/" itemprop="url">Logistic Regression</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-24T15:01:01+08:00">2018-03-24</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>用于分类问题。<br>某一个输入X属于某个类的概率为 \(f_{w,b}=\sigma(\sum_{i=1}^nw_ix_i+b)\)<br>假设只有两个分类，\(C_1 和 C_2\)。<br>且有：</p>
+<table>
+<thead>
+<tr>
+<th>\(x^1\)</th>
+<th>\(x^2\)</th>
+<th>\(x^3\)</th>
+<th>……</th>
+<th>\(x^N\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\(C_1\)</td>
+<td>\(C_1\)</td>
+<td>\(C_2\)</td>
+<td>……</td>
+<td>\(C_1\)</td>
+</tr>
+</tbody>
+</table>
+<p>利用极大似然估计\(w和b\)的值：<br>$$<br>L(w,b)=f_{w,b}(x^1)f_{w,b}(x^2)(1-f_{w,b}(x^3))…f_{w,b}(x^N)<br>\\<br>-lnL(w,b)=f_{w,b}(x^1)+f_{w,b}(x^2)+(1-f_{w,b}(x^3))+…+f_{w,b}(x^N)<br>\\<br>设 分类一\dot{y}^n=1, 分类二\dot{y}^n=0<br>\\<br>原式=\sum_n-[\dot y^nlnf_{w,b}(x^n)+(1-\dot y^n)ln(1-f_{w,b}(x^n)]<br>$$<br>由上式可得，最终求和的式子为两个0-1分布的交叉熵(cross entropy)<br>交叉熵描述了两个分布的接近程度。如果两个分布一摸一样，那么它们的交叉熵为0。<br>两个0-1分布：<br>$$<br>p(x=1)=\dot y^n\\<br>p(x=0)=1-\dot y^n\\<br>q(x=1)=f(x^n)\\<br>q(x=0)=1-f(x^n)<br>$$<br>$$<br>H(p,q)=-\sum_np(x)ln(q(x))<br>$$<br>交叉熵就是作为Loss function。<br>对Loss function求偏微分<br>$$<br>\frac{-lnL(w,b)}{\partial w_i}=\sum_n-(\dot y^n-f_{w,b}(x^n))x_i^n<br>$$<br>这个式子与线性回归中的梯度下降式子一摸一样。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.alphamj.cn/2018/03/24/Feature-scaling/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -875,7 +1020,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -896,7 +1041,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -919,7 +1066,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1481,9 +1630,11 @@
   
     
       
+        
+      
     
       
-        
+    
       
     
       
