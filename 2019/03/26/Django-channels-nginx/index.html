@@ -107,12 +107,10 @@
 <meta property="og:site_name" content="ahphaMJ&#39;s Blog">
 <meta property="og:description" content="WebSocket是一种在单个TCP连接上进行全双工通信的协议，它允许服务端主动向客户端推送数据，在网络游戏、聊天室等场合有很大用处[1]。通常情况使用Wsgi部署的Django并不能提供websocket支持，此时需要引入asgi作为服务接口。  如图所示，ASGI将消息按照协议分成http和websocket两类，http消息依然按照Django传统的url-view方式处理，websocke">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://blog.alphamj.cn/2019/03/26/Django-channels-nginx/Django-channels-nginx/1.jpg">
-<meta property="og:updated_time" content="2019-03-26T14:30:50.920Z">
+<meta property="og:updated_time" content="2019-03-26T14:37:27.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django-Websocket 部署记录">
 <meta name="twitter:description" content="WebSocket是一种在单个TCP连接上进行全双工通信的协议，它允许服务端主动向客户端推送数据，在网络游戏、聊天室等场合有很大用处[1]。通常情况使用Wsgi部署的Django并不能提供websocket支持，此时需要引入asgi作为服务接口。  如图所示，ASGI将消息按照协议分成http和websocket两类，http消息依然按照Django传统的url-view方式处理，websocke">
-<meta name="twitter:image" content="http://blog.alphamj.cn/2019/03/26/Django-channels-nginx/Django-channels-nginx/1.jpg">
 
 
 
@@ -414,7 +412,7 @@
 
       
         <p>WebSocket是一种在单个TCP连接上进行全双工通信的协议，它允许服务端主动向客户端推送数据，在网络游戏、聊天室等场合有很大用处<a href="https://zh.wikipedia.org/wiki/WebSocket" target="_blank" rel="noopener">[1]</a>。通常情况使用Wsgi部署的Django并不能提供websocket支持，此时需要引入<a href="https://asgi.readthedocs.io/en/latest/" target="_blank" rel="noopener">asgi</a>作为服务接口。</p>
-<p><img src="Django-channels-nginx/1.jpg" alt="1"></p>
+
 <p>如图所示，ASGI将消息按照协议分成http和websocket两类，http消息依然按照Django传统的url-view方式处理，websocket消息则由新的“消费者“机制处理。</p>
 <h3 id="在Django中使用Websocket"><a href="#在Django中使用Websocket" class="headerlink" title="在Django中使用Websocket"></a>在Django中使用Websocket</h3><ol>
 <li>安装相应功能模块，本文基于以下版本书写。</li>
